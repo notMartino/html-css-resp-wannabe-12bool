@@ -1,0 +1,84 @@
+/* Poprietà generali */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: white;
+}
+.row{
+  text-align: center;
+}
+
+/* Proprietà main */
+main section{
+  margin: 20px 0;
+}
+main section:last-child{
+  margin-bottom: 0;
+}
+/* Sfondo grigio */
+.greybackground{
+  background-color: #f9f9f9;
+}
+#blue img{
+  background-color: #428bca;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+/* Poprietà specifiche colonne */
+[class*="col-"]{
+  min-height: 100px;
+  padding: 20px;
+}
+.row img{
+  max-height: 200px;
+  height: auto;
+  max-width: 100%;
+}
+.row .imgpiccole{
+  min-height: 200px;
+}
+.row h1{
+  padding: 10px 0;
+  font-size: 30px;
+}
+.row h3{
+  margin-bottom: 10px;
+}
+.row p{
+  margin-bottom: 10px;
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  [class*="col-"]{
+    font-size: 0.9rem;
+  }
+  .row img{
+    max-height: 150px;
+    max-width: 100%;
+  }
+  .row .imgpiccole{
+    min-height: 150px;
+  }
+  .row h1{
+    font-size: 25px;
+  }
+}
+@media all and (max-width: 575px) {
+  [class*="col-"]{
+    font-size: 0.8rem;
+  }
+  .row img{
+    max-height: 100px;
+    max-width: 100%;
+  }
+  .row .imgpiccole{
+    min-height: auto;
+  }
+  .row h1{
+    font-size: 20px;
+  }
+}
